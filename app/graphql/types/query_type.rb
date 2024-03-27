@@ -32,10 +32,10 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :blogs, [Types::BlogType], null: false
+    field :payments, [Types::PaymentType], null: false, description: "List all payments"
 
-    def blogs
-      Blog.all
+    def payments
+      Payment.all
     end
   end
 end
